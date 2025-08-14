@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <p id="navpara">Hello</p>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="Red box">Red</div>
+            <div class="Green box">Green</div>
+            <div class="Blue box">Blue</div>
+            <div class="Yellow box">Yellow</div>
+        </div>
+    </main>
+
+    <section class="inpt">
+        <input id="input-text" type="text" placeholder="Enter your name...">
+        <button class="input-text-label" onclick="inpuTText()">Greet</button>
+    </section>
+
+    <script>
+        // Function to update the greeting text
+        function inpuTText() {
+            let input = document.getElementById("input-text").value;
+            if(input) {  // Check if input is not empty
+              let output =  document.getElementById("navpara").innerText = "Hello, " + input;
+            } else {
+                document.getElementById("navpara").innerText = "Please enter your name...!";
+            }
+        }
+
+        // Event listener for 'Red' box
+        let red = document.querySelector('.Red');
+        red.addEventListener('click', function() {
+        red.style.backgroundColor="red";
+        });
+
+
+        let Green = document.querySelector('.Green');
+        Green.addEventListener('click',function(){
+            Green.style.backgroundColor="green"
+        })
+
+        let Blue = document.querySelector('.Blue');
+        Blue.addEventListener('click',function(){
+            Blue.style.backgroundColor="blue"
+        })
+
+        let Yellow = document.querySelector('.Yellow');
+        Yellow.addEventListener('click',function(){
+        Yellow.style.backgroundColor = "yellow"
+        })
+
+    </script>
+</body>
+</html>
